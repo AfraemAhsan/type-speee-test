@@ -143,6 +143,8 @@ button {
 
 #histories {
   display: flex;
+
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -152,6 +154,7 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -188,5 +191,19 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+  #result {
+    justify-content: center;
+    margin-left: 367px;
+    margin-top: -458px;
+    transform: translate(-50%, -50%);
+    height: 213px;
+    width: 383px;
+    background-color: #171717;
+    border-radius: 15px;
+    border: 2px solid #9dffad;
+    color: white;
+    text-align: center;
+    padding: 2rem;
   }
 }
