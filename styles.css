@@ -62,9 +62,9 @@ body {
   display: none;
 }
 #result {
-  justify-content: center;
-  margin-left: 771px;
-  margin-top: -587px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -143,8 +143,6 @@ button {
 
 #histories {
   display: flex;
-
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -154,7 +152,6 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -183,18 +180,6 @@ button {
   position: fixed;
   top: 0;
 }
-.question-and-answer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-transform: capitalize;
-  width: 100%;
-  color: white;
-}
 
 @media only screen and (max-width: 700px) {
   .box-container {
@@ -202,20 +187,19 @@ button {
     width: 100%;
   }
   .card {
-    flex-direction: row;
+    flex-direction: column;
   }
-  #result {
-    justify-content: center;
-    margin-left: 367px;
-    margin-top: -458px;
-    transform: translate(-50%, -50%);
-    height: 213px;
-    width: 383px;
-    background-color: #171717;
-    border-radius: 15px;
-    border: 2px solid #9dffad;
-    color: white;
+}
+@media only screen and (min-width: 700px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 2rem;
   }
 }
